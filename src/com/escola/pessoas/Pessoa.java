@@ -2,6 +2,7 @@ package com.escola.pessoas;
 
 import com.escola.Endereco;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import static java.util.Calendar.*;
@@ -31,7 +32,7 @@ public class Pessoa {
     protected void atualizarIdade () {
         this.idade = calcularIdade ();
     }
-    protected int recuperarIdade () {
+    protected int getIdade() {
         return this.idade;
     }
     protected void setCPF ( long CPF ) {
@@ -45,6 +46,12 @@ public class Pessoa {
     }
     protected Endereco getEndereco() {
         return this.endereco;
+    }
+    protected String formatarDataNascimento(){
+        int ano = data_nascimento.get(YEAR);
+        int mes = data_nascimento.get(MONTH);
+        int dia = data_nascimento.get(DAY_OF_MONTH);
+        return String.format("%02d/%02d/%04d", dia, mes, ano);
     }
     private int calcularIdade (){
         int lapso;

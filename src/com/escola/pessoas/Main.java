@@ -99,7 +99,9 @@ public class Main {
     public static void imprimirDados(Pessoa pessoa) {
         System.out.println("Tipo: " + pessoa.getClass().getSimpleName());
         System.out.println("Nome: " + pessoa.getNome());
-        System.out.println("Idade: " + pessoa.recuperarIdade());
+        System.out.println("Data de Nascimento: " + pessoa.formatarDataNascimento());
+        System.out.println("Idade: " + pessoa.getIdade());
+
 
         Endereco endereco = pessoa.getEndereco();
         System.out.println("Endereço: " + endereco.getRua() + ", " + endereco.getNumero() +
