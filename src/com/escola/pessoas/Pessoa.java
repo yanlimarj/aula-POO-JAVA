@@ -2,7 +2,6 @@ package com.escola.pessoas;
 
 import com.escola.Endereco;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import static java.util.Calendar.*;
@@ -11,7 +10,7 @@ public class Pessoa {
     //Atributos
     private String nome;
     private int idade;
-    private Calendar data_nascimento;
+    private final Calendar data_nascimento;
     private long CPF;
     private Endereco endereco;
 
