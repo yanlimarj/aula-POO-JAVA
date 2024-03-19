@@ -25,6 +25,7 @@ public class Main {
         Aluno aluno = new Aluno("Maria", dataAluno, 123456789, enderecoAluno);
         aluno.atualizarIdade();
         imprimirDados(aluno);
+        System.out.println();
 
         // Exemplo de coordenador
         Calendar dataCoordenador = Calendar.getInstance();
@@ -40,6 +41,8 @@ public class Main {
         Coordenador coordenador = new Coordenador("João", dataCoordenador, 987654321, enderecoCoordenador, "Ciências");
         coordenador.atualizarIdade();
         imprimirDados(coordenador);
+        System.out.println("Area de coordenação: " + coordenador.getAreaCoordenacao());
+        System.out.println();
 
         // Exemplo de diretor
         Calendar dataDiretor = Calendar.getInstance();
@@ -55,6 +58,8 @@ public class Main {
         Diretor diretor = new Diretor("Carlos", dataDiretor, 654321987, enderecoDiretor, "Administração");
         diretor.atualizarIdade();
         imprimirDados(diretor);
+        System.out.println("Departamento: " + diretor.getDepartamento());
+        System.out.println();
 
         // Exemplo de professor
         Calendar dataProfessor = Calendar.getInstance();
@@ -70,6 +75,8 @@ public class Main {
         Professor professor = new Professor("Ana", dataProfessor, 456789123, enderecoProfessor, "Matemática");
         professor.atualizarIdade();
         imprimirDados(professor);
+        System.out.println("Disciplina(s): " + professor.getDisciplina());
+        System.out.println();
 
         // Exemplo de secretario
         Calendar dataSecretario = Calendar.getInstance();
@@ -85,9 +92,12 @@ public class Main {
         Secretario secretario = new Secretario("Paulo", dataSecretario, 789123456, enderecoSecretario, "Secretariado");
         secretario.atualizarIdade();
         imprimirDados(secretario);
+        System.out.println("Departamento: " + secretario.getDepartamento());
+        System.out.println();
     }
 
     public static void imprimirDados(Pessoa pessoa) {
+        System.out.println("Tipo: " + pessoa.getClass().getSimpleName());
         System.out.println("Nome: " + pessoa.getNome());
         System.out.println("Idade: " + pessoa.recuperarIdade());
 
@@ -96,6 +106,6 @@ public class Main {
                 ", " + endereco.getComplemento() + ", " + endereco.getCidade() +
                 ", " + endereco.getUf() + ", " + endereco.getPais());
 
-        System.out.println();
     }
+
 }
