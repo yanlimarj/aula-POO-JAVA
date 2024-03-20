@@ -6,7 +6,7 @@ import com.escola.pessoas.Empregado;
 
 import java.util.Calendar;
 
-public class Professor extends Empregado {
+public final class Professor extends Empregado {
     private String disciplina;
 
     public Professor(String nome, Calendar data_nascimento, long CPF, Endereco endereco, String disciplina) {

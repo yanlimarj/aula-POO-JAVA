@@ -5,7 +5,7 @@ import com.escola.pessoas.Empregado;
 
 import java.util.Calendar;
 
-public class Secretario extends Empregado {
+public final class Secretario extends Empregado {
     private String departamento;
 
     public Secretario(String nome, Calendar data_nascimento, long CPF, Endereco endereco, String departamento) {

@@ -6,7 +6,7 @@ import com.escola.pessoas.Empregado;
 
 import java.util.Calendar;
 
-public class Coordenador extends Empregado {
+public final class Coordenador extends Empregado {
     private String areaCoordenacao;
 
     public Coordenador(String nome, Calendar data_nascimento, long CPF, Endereco endereco, String areaCoordenacao) {
