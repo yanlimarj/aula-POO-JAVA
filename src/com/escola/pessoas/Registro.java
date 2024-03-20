@@ -1,16 +1,17 @@
 package com.escola.pessoas;
 
 import com.escola.Endereco;
-import com.escola.pessoas.Aluno;
 import com.escola.pessoas.empregados.Coordenador;
 import com.escola.pessoas.empregados.Diretor;
 import com.escola.pessoas.empregados.Professor;
 import com.escola.pessoas.empregados.Secretario;
 
 import java.util.Calendar;
+import java.util.Random;
+
 
 public class Registro {
-
+    static Random gerador = new Random();
     public static Aluno getAluno() {
         Calendar dataAluno = Calendar.getInstance();
         dataAluno.set(2000, 5, 15);
@@ -22,7 +23,8 @@ public class Registro {
         enderecoAluno.setNumero("123");
         enderecoAluno.setCep(20000000);
         enderecoAluno.setComplemento("Ap 101");
-        Aluno aluno = new Aluno("Maria", dataAluno, 123456789, enderecoAluno);
+        int matricula = gerador.nextInt(0, 10000);
+        Aluno aluno = new Aluno("Maria", dataAluno, 123456789, enderecoAluno, matricula);
         aluno.atualizarIdade();
         return aluno;
     }

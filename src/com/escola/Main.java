@@ -1,12 +1,11 @@
-package com.escola.pessoas;
+package com.escola;
 
-import com.escola.Endereco;
+import com.escola.pessoas.Aluno;
 import com.escola.pessoas.empregados.Coordenador;
 import com.escola.pessoas.empregados.Diretor;
 import com.escola.pessoas.empregados.Professor;
 import com.escola.pessoas.empregados.Secretario;
 
-import java.util.Calendar;
 
 import static com.escola.pessoas.Registro.*;
 
@@ -16,6 +15,7 @@ public class Main {
         // Exemplo de aluno
         Aluno aluno = getAluno();
         imprimirDados(aluno);
+        System.out.println("Matricula: " + aluno.getMatricula());
         System.out.println();
 
         // Exemplo de coordenador
@@ -42,8 +42,4 @@ public class Main {
         System.out.println("Departamento: " + secretario.getDepartamento());
         System.out.println();
     }
-
-
-
-
 }
