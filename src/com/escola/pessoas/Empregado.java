@@ -4,7 +4,7 @@ import com.escola.Endereco;
 
 import java.util.Calendar;
 
-public class Empregado extends Pessoa {
+public abstract class Empregado extends Pessoa {
     //Atributos
     protected String matricula;
 
