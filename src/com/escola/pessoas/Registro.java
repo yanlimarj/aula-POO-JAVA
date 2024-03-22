@@ -82,7 +82,7 @@ public class Registro {
         Endereco enderecoSecretario = new Endereco();
         enderecoSecretario.setPais("Brasil");
         enderecoSecretario.setUf("BA");
-        enderecoSecretario.setCidade("Salvador");
+        enderecoSecretario.setCidade("Juazeiro");
         enderecoSecretario.setRua("Rua do Trabalho");
         enderecoSecretario.setNumero("789");
         enderecoSecretario.setCep(40000000);
